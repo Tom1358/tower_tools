@@ -1,6 +1,112 @@
+Tower Tools
+
+Church bell ringing, and campanology, is a hobby that continues to attract people even into the twenty-first century; however, for tower captains (who manage the ringers) and steeple keepers (who maintain the towers) it can have many challenges - recruitment and retaining ringers as a voluntary hobby and training them up is always something that requires assistance in the form of equipment, tools, ideas and resources.  Maintaining a tower involves knowledge of rope, bell and wood/ frame maintenance, and knowing who or where to go for assistance, know-how and specific items for the industry.
+
+This site aims to act as a hub for people interested in tower maintenance or ringing development to purchase items that would be of value, and also to provide merchandise to help boost financial resources that can help the ringing community.
+
+Contents
+
+UX
+Structure
+Technologies Used
+Testing
+Deployment
+Credits
+
+# UX
+## User Stories
+---
+### viewing & navigation
+---
+As a shopper, I want to be able to...
+- view a list of all products, so that I can see what the website has to offer as a whole.
+- View a list of specific/ categorised products, so that I can filter through products to view/ purchase what is relevant to me.
+- View individual product details, so that I can look at specific item details to ensure it is the thing I want.
+- View the total cost of my basket/ planned purchases, so that I stick to my budget/ do not spend too much on the site.
+---
+### registration & sign-in
+---
+As a site user, I want to be able to...
+- Easily register for an account, so that I can have an account to view my personalised user profile.
+- Easily log in and out so that I can access my account information securely and safely, knowing my details are secure.
+- Have a personalised user profile, so that I can view personal order history, save payment information, and save a basket for future browsing.
+---
+### sorting & searching
+---
+As a shopper, I want to be able to...
+- Search for products by name or description, so that I can find whether a specific product is available on the site to purchase.
+- Easily see what I've searched for and the number of results, so that I can get the results for a search at a glance, and see what availability there is.
+---
+### purchase & checkout
+---
+As a shopper, I want to be able to...
+- Easily select the number of items (and size, if it's clothing) to add to my basket, so that I can easily add more items if required (e.g. six new items)
+- View items in my basket I plan to purchase, so that I can have an overview/ summary of what I am buying in total.
+- Be able to update or delete any items in my shopping basket, so that I can easily prevent buyer's remorse, or splash out on more if required.
+- Safely, securely and easily enter payment information, so that I can purchase items from the website without worrying about the safety/ security of doing so.
+- View an order summary before submitting a payment, so that I can review my purchases before it submits.
+---
+### site admin
+---
+As a site administrator, I want to be able to...
+- Add a product, so that I can add new items to the online store.
+- Update a product, so that I can change any details of any products if required.
+- Delete a product, so that I can remove a product from the store if it is no longer available.
+# Structure
+## Overview of Site and Page Structure
+
+## Wireframes for Skeleton of Website
+
+## Colour theme(s) and Styling
+
+
+
+
+# Technologies Used
+## Languages
+
+## Libraries & Frameworks
+
+## Editors
+
+## Tools
+
+## Deployment Platform
+
+
+
+
+# Testing
+
+
+
+
+# Deployment
+
+
+
+
+# Credits
+## Design and Research
+- Code: Institute's 'Boutique Ado' project - for the use of Django in an e-commerce environment
+
+## Content - Images and Text
+
+
+## Support
+
+
+# Disclaimer - this site is not designed for professional use.  It has been developed as a learning project for getting to grips with the Python framework Django, and should be deemed as such.
+
+
+
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome USER_NAME,
+Welcome Tom1358,
 
 This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
