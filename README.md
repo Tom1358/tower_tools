@@ -15,43 +15,76 @@ Credits
 
 # UX
 ## User Stories
+
+<details>
+<summary>Viewing & Navigation</summary>
+
+| As a…   | I want to be able to…                               | …so that I can…                                                  |
+|---------|-----------------------------------------------------|------------------------------------------------------------------|
+| shopper | view a list of all products                         | See what the website has to offer as a whole                     |
+|         | View a list of specific/ categorised products       | Filter through products to view/ purchase what is relevant to me |
+|         | View individual product details                     | Look at specific item details to ensure it is the thing I want   |
+|         | View the total cost of my basket/ planned purchases | Ensure I stick to budget/ do not spend too much on the site      |
+</details>
+
 ---
-### viewing & navigation
+<details>
+<summary>Registration & Sign-in</summary>
+
+| As a…     | I want to be able to…            | …so that I can…                                                                              |
+|-----------|----------------------------------|----------------------------------------------------------------------------------------------|
+| Site user | Easily register for an account   | have an account to view my personalised user profile                                         |
+|           | Easily log in/ out               | Access my account information securely and safely, knowing my details are secure             |
+|           | Have a personalised user profile | view personal order history, save payment information, and save a basket for future browsing |
+</details>
+
 ---
-As a shopper, I want to be able to...
-- view a list of all products, so that I can see what the website has to offer as a whole.
-- View a list of specific/ categorised products, so that I can filter through products to view/ purchase what is relevant to me.
-- View individual product details, so that I can look at specific item details to ensure it is the thing I want.
-- View the total cost of my basket/ planned purchases, so that I stick to my budget/ do not spend too much on the site.
+<details>
+<summary>Sorting & Searching</summary>
+
+| As a…   | I want to be able to…                                       | …so that I can…                                                              |
+|---------|-------------------------------------------------------------|------------------------------------------------------------------------------|
+| Shopper | Search for products by name or description                  | Find whether a specific product is available on the site to purchase         |
+|         | Easily see what I've searched for and the number of results | Get the results for a search at a glance, and see what availability there is |
+</details>
+
 ---
-### registration & sign-in
+<details>
+<summary>Purchase & Checkout</summary>
+
+| As a…   | I want to be able to…                                       | …so that I can…                                                                         |
+|---------|-------------------------------------------------------------|-----------------------------------------------------------------------------------------|
+| Shopper | Easily select the number of items to add to my basket       | Easily add more items if required (e.g. six new items)                                  |
+|         | View items in my basket I plan to purchase                  | have an overview/ summary of what I am buying in total                                  |
+|         | Be able to update or delete any items in my shopping basket | Easily prevent buyer's remorse, or splash out on more if required                       |
+|         | Safely, securely and easily enter payment information       | Purchase items from the website without worrying about the safety/ security of doing so |
+|         | View an order summary before submitting a payment           | Review my purchases before it submits                                                   |
+|         | View an order confirmation after submitting a payment       | Confirm that everything went through correctly                                          |
+|         | Receive an email confirmation after submitting a payment    | Have a record of what I have paid for, and when                                         |
+</details>
+
 ---
-As a site user, I want to be able to...
-- Easily register for an account, so that I can have an account to view my personalised user profile.
-- Easily log in and out so that I can access my account information securely and safely, knowing my details are secure.
-- Have a personalised user profile, so that I can view personal order history, save payment information, and save a basket for future browsing.
+<details>
+<summary>Site Admin</summary>
+
+| As a…      | I want to be able to… | …so that I can…                                              |
+|------------|-----------------------|--------------------------------------------------------------|
+| Site Admin | Add a product         | Add new items to the online store                            |
+|            | Update a product      | Change any details of any products if required               |
+|            | Delete a product      | Remove a product from the store if it is no longer available |
+</details>
+
 ---
-### sorting & searching
+<details>
+<summary>Product Reviews</summary>
+
+| As a…      | I want to be able to…                                                  | …so that I can…                                                                     |
+|------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------|
+| Shopper    | Leave a review of a product I have bought - in the format of 1-5 stars and a comment | Share my thoughts on the product with other shoppers                                |
+| Site admin | Remove a review                                                        | Remove any review if it is deemed offensive/ not relevant/ not acceptable for site. |
+</details>
+
 ---
-As a shopper, I want to be able to...
-- Search for products by name or description, so that I can find whether a specific product is available on the site to purchase.
-- Easily see what I've searched for and the number of results, so that I can get the results for a search at a glance, and see what availability there is.
----
-### purchase & checkout
----
-As a shopper, I want to be able to...
-- Easily select the number of items (and size, if it's clothing) to add to my basket, so that I can easily add more items if required (e.g. six new items)
-- View items in my basket I plan to purchase, so that I can have an overview/ summary of what I am buying in total.
-- Be able to update or delete any items in my shopping basket, so that I can easily prevent buyer's remorse, or splash out on more if required.
-- Safely, securely and easily enter payment information, so that I can purchase items from the website without worrying about the safety/ security of doing so.
-- View an order summary before submitting a payment, so that I can review my purchases before it submits.
----
-### site admin
----
-As a site administrator, I want to be able to...
-- Add a product, so that I can add new items to the online store.
-- Update a product, so that I can change any details of any products if required.
-- Delete a product, so that I can remove a product from the store if it is no longer available.
 # Structure
 ## Overview of Site and Page Structure
 
