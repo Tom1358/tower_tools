@@ -115,7 +115,14 @@ Credits
 
 
 # Deployment
-
+## Heroku
+1. Sign in to heroku.com, create a new app, and on the Deploy tab select GitHub as deployment method.
+2. Connect to the relevant repository, and select Enable Automatic Deploys from GitHub.
+3. In the GitHub CLI, using PIP3, install psycopg2-binary (this is the Django-side installation for using PostgresSQL as a database) and gunicorn (acts as web server for deployment).
+4. At heroku.com, go to the Resources tab, and type in Postgres.  Select Heroku Postgres, and Submit.  This will install Postgres, as a permanent db (rather than the ephemeral default db that Django provides, SQLite3).
+5. Confirm at heroku.com in Settings > Config Vars that there is the link for the new db available.
+6. In the GitHub CLI, you can confirm the Heroku app has the Postgres db by logging in (heroku login -i) and the command heroku addons.  Then, use PIP3 to install dj_database_url (allows us to parse the db that Heroku has created).
+7. In settings.py, in the DATABASES section, remove the original SQLite3 code, and include the Heroku Postgres Databased URL ('default': dj_database_url.parse(...)), and 
 
 
 
