@@ -92,6 +92,9 @@ Credits
 
 ## Colour theme(s) and Styling
 
+Font chosen:
+- For logo - Stencil
+- For website text/ headers - Oxygen
 
 
 
