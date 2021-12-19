@@ -115,15 +115,56 @@ Credits
 
 
 # Deployment
-## Heroku
-1. Sign in to heroku.com, create a new app, and on the Deploy tab select GitHub as deployment method.
-2. Connect to the relevant repository, and select Enable Automatic Deploys from GitHub.
-3. In the GitHub CLI, using PIP3, install psycopg2-binary (this is the Django-side installation for using PostgresSQL as a database) and gunicorn (acts as web server for deployment).
-4. At heroku.com, go to the Resources tab, and type in Postgres.  Select Heroku Postgres, and Submit.  This will install Postgres, as a permanent db (rather than the ephemeral default db that Django provides, SQLite3).
+
+This project has been developed using Gitpod and GitHub.  The website resides as a repository in GitHub, and has been deployed using Heroku.  Static files are stored using Amazon AWS in an Amazon Web Services S3 Bucket.
+
+## to Fork this project
+
+## to Clone this project
+
+## to Download this project
+
+## Necessary Environment Variables (if cloning/ forking project)
+
+| Variable              | Value                             |
+|-----------------------|-----------------------------------|
+| DEVELOPMENT           | True                              |
+| SECRET_KEY            | `your_django_secret_key`          |
+| HEROKU_HOSTNAME       | `appname.herokuapp.com`           |
+| STRIPE_PUBLIC_KEY     | `your_stripe_public_key`          |
+| STRIPE_SECRET_KEY     | `your_stripe_secret_key`          |
+| STRIPE_WH_SECRET      | `your_stripe_webhook_secret_key`  |
+
+
+## to deploy the website to Heroku
+
+1. Sign in to heroku.com, create a new app (*new* button at top right of dashboard), and on the Deploy tab select GitHub as deployment method.
+2. Connect to the relevant repository.
+3. At heroku.com, go to the Resources tab, and type in Postgres.  Select Heroku Postgres, and Submit.  This will install POSTGRES.
+4. In the GitHub CLI, using PIP3, install `psycopg2-binary` and `gunicorn`.  You can confirm the Heroku app has the POSTGRES db by logging in (`heroku login -i`) and the command `heroku addons`.  Then, use PIP3 to install `dj_database_url`.  Create a `requirements.txt` file with the CLI command `pip3 freeze --local > requirements.txt`, to list all the Python dependencies.
 5. Confirm at heroku.com in Settings > Config Vars that there is the link for the new db available.
-6. In the GitHub CLI, you can confirm the Heroku app has the Postgres db by logging in (heroku login -i) and the command heroku addons.  Then, use PIP3 to install dj_database_url (allows us to parse the db that Heroku has created).
-7. In settings.py, in the DATABASES section, remove the original SQLite3 code, include the Heroku Postgres Databased URL ('default': dj_database_url.parse(...)), and import dj_database_url at the top.
-8. Run migrations (python3 manage.py migrate) to ensure that this new db is linked up and working.  This will then populate it with the data.
+6. In settings.py, in the DATABASES section, remove the original SQLite3 code, include the Heroku POSTGRES database URL `'default': dj_database_url.parse(...)`, and `import dj_database_url` at the top.
+7. Also in settings.py, add `ALLOWED_HOSTS = [os.environ.get('HEROKU_HOSTNAME')]`
+8. Show, plan and complete migrations (`python3 manage.py showmigrations`, `python3 manage.py migrate --plan`, `python3 manage.py migrate`) to ensure that this new db is linked up and working.  This will then populate it with the necessary data.
+9. Create a Procfile with the line `web: gunicorn`[app name]`.wsgi:application`.  Now is a good time to update the `requirements.txt` file and add, commit and push to GitHub.
+10. Generate a Django secret key using [miniwebtool.com](www.miniwebtool.com)
+11. At heroku.com, in Settings > Config Vars, ensure the following variables and values are set:
+
+| Variable              | Value                    |
+|-----------------------|--------------------------|
+| DISABLE_COLLECTSTATIC | 1                        |
+| SECRET_KEY            | `your_django_secret_key` |
+| HEROKU_HOSTNAME       | `appname.herokuapp.com`  |
+
+12. Confirm the app is connected to the correct GitHub repository, and enable Automatic Deploys in the Deploy tab.
+13. The above settings mean that now when anything is pushed to GitHub, it will automatically be sent to Heroku, which will build the app with the required packages and dependencies.
+14. Comfirm that the application is automatically deploying to Heroku by checking the build log in the activity tab; the app in Heroku is now successfully linked to GitHub.
+
+
+## to deploy static files to Amazon AWS, and configure Heroku to read static files from Amazon AWS
+
+## to configure Stripe for the deployed site
+
 
 
 
