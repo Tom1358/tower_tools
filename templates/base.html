@@ -20,11 +20,18 @@
     {% block extra_css %}
     {% endblock %}
 
-    <title>Tower Tools {% block extra_title %}{% endblock %}</title>
+    <title>Tower Tools</title>
 </head>
 <body>
-    
-    <h1>Hello World!</h1>
+    <header class="container-fluid fixed-top"></header>
+
+    {% block page_header %}
+        <div class="message-container"></div>
+    {% endblock %}
+
+    {% block content %}
+        <div class="message-container"></div>
+    {% endblock %}
 
     {% block corejs %}
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
@@ -32,6 +39,10 @@
     {% endblock %}
 
     {% block extra_js %}
+    {% endblock %}
+
+    {% block postload_js %}
+        <div class="message-container"></div>
     {% endblock %}
 </body>
 </html>
