@@ -1,0 +1,10 @@
+html {
+    height: 100%;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Stardos Stencil', cursive;
+}
