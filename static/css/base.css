@@ -12,4 +12,11 @@ body {
     text-transform: uppercase;
     color: black;
     font-family: 'Stardos Stencil', cursive;
+    
 }
+
+@media only screen and (max-width: 767px) {
+    .logo-font {
+      text-align: center;
+    }
+  }

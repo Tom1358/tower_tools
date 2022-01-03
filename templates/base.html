@@ -42,30 +42,34 @@
       <div class="row">
 
         <!-- Site name/ logo in nav -->
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-12 col-md-6 my-auto py-1 py-md-0">
+          
+          
           <a href="{% url 'home' %}" class="nav-link main-logo-link">
             <h2 class="logo-font text-black my-0">Tower Tools</h2>
           </a>
-        </div>
+          
+          
+          <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+            </ul>
+          </div>
+    
 
-        <!-- Search bar in nav -->
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <form action="" method="GET">
-            <div class="input-group w-100">
-              <input type="text" class="form-control" name="q" placeholder="search">
-              <div class="input-group-prepend">
-                <button class="form-control btn border" type="submit">
-                  <span class="icon">
-                    <i class="fas fa-search"></i>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </form>
         </div>
 
         <!-- icons to right in nav -->
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+        <div class="col-12 col-md-6 my-auto py-1 py-md-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
 
             <!-- profile icon in nav -->
@@ -79,10 +83,10 @@
                             <a href="" class="dropdown-item">Product Management</a>
                         {% endif %}
                         <a href="" class="dropdown-item">My Profile</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
                     {% else %}
                         <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
                     {% endif %}
                 </div>
             </li>
@@ -100,6 +104,25 @@
                     </div>
                 </a>
             </li>
+
+            <!-- Search bar in nav -->
+            <li class="list-inline-item">
+              <div class="my-auto py-1 py-md-0">
+                <form action="" method="GET">
+                  <div class="input-group w-100">
+                    <input type="text" class="form-control" name="q" placeholder="search">
+                    <div class="input-group-prepend">
+                      <button class="form-control btn border" type="submit">
+                        <span class="icon">
+                          <i class="fas fa-search"></i>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+            
         </ul>
         </div>
       </div>
