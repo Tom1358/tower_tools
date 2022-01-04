@@ -2,12 +2,6 @@ html {
     height: 100%;
 }
 
-body {
-    background: url('media/images/Alverstoke_banner.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-}
-
 .logo-font {
     text-transform: uppercase;
     color: black;
@@ -20,3 +14,14 @@ body {
       text-align: center;
     }
   }
+
+.icons_float_left {
+    left: auto;
+}
+
+#background-image {
+    background: url('../imgs/Alverstoke_banner.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}

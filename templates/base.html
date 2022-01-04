@@ -30,103 +30,92 @@
     {% block corejs %}
     <!-- JavaScript Bundle with Popper -->
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     {% endblock %}
 
     <title>Tower Tools</title>
 </head>
 <body>
-    <!-- Navbar -->
-    <header class="container-fluid fixed-top">
-      <div class="row">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a href="{% url 'home' %}" class="nav-link main-logo-link">
+        <h2 class="logo-font text-black my-0">Tower Tools</h2>
+      </a>
 
-        <!-- Site name/ logo in nav -->
-        <div class="col-12 col-md-6 my-auto py-1 py-md-0">
-          
-          
-          <a href="{% url 'home' %}" class="nav-link main-logo-link">
-            <h2 class="logo-font text-black my-0">Tower Tools</h2>
-          </a>
-          
-          
-          <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-            </ul>
-          </div>
-    
+      <button class="navbar-toggler ml-3 mr-auto" type="button" data-bs-toggle="collapse" data-bs-target="#dropdown_menu"
+        aria-controls="dropdown_menu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        </div>
+      <div class="collapse navbar-collapse" id="dropdown_menu">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
-        <!-- icons to right in nav -->
-        <div class="col-12 col-md-6 my-auto py-1 py-md-0">
-          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">Ringing Equipment</a>
+          </li>
 
-            <!-- profile icon in nav -->
-            <li class="dropdown list-inline-item">
-                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-user fa-lg"></i>
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                    {% if request.user.is_authenticated %}
-                        {% if request.user.is_superuser %}
-                            <a href="" class="dropdown-item">Product Management</a>
-                        {% endif %}
-                        <a href="" class="dropdown-item">My Profile</a>
-                        <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
-                    {% else %}
-                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
-                    {% endif %}
-                </div>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link text-black">Merchandise</a>
+          </li>
 
-            <!-- shopping basket icon in nav -->
-            <li class="list-inline-item">
-                <a class="{% if in_basket %}text-info font-weight-bold text-black{% else %}text-black{% endif %} nav-link" href="">
-                    <div class="text-center">
-                        <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                        <p class="my-0">
-                            {% if in_basket %}
-                                {{ in_basket }}
-                            {% endif %}
-                        </p>
-                    </div>
-                </a>
-            </li>
-
-            <!-- Search bar in nav -->
-            <li class="list-inline-item">
-              <div class="my-auto py-1 py-md-0">
-                <form action="" method="GET">
-                  <div class="input-group w-100">
-                    <input type="text" class="form-control" name="q" placeholder="search">
-                    <div class="input-group-prepend">
-                      <button class="form-control btn border" type="submit">
-                        <span class="icon">
-                          <i class="fas fa-search"></i>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </li>
-            
+          <li class="nav-item">
+            <a class="nav-link text-black">Learning Tools</a>
+          </li>
         </ul>
-        </div>
+
+        <form class="d-flex mr-4">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
-    </header>
+    
+      <ul class="mr-3">
+        <!-- profile icon in nav -->
+        <li class="dropdown list-inline-item">
+
+          <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fas fa-user fa-lg"></i>
+          </a>
+
+          <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+            <a href="" class="dropdown-item">Product Management</a>
+            {% endif %}
+            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Sign Out</a>
+            {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+            {% endif %}
+          </div>
+        </li>
+
+        <!-- shopping basket icon in nav -->
+        <li class="list-inline-item">
+          <a class="{% if in_basket %}text-info font-weight-bold text-black{% else %}text-black{% endif %} nav-link"
+            href="">
+            <div class="text-center">
+              <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+              <p class="my-0">
+                {% if in_basket %}
+                {{ in_basket }}
+                {% endif %}
+              </p>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+    
+  </nav>
+
+<div id="background-image">
+  <div id="main-logo"></div>
+</div>
 
     {% if messages %}
         <div class="message-container"></div>
