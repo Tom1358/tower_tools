@@ -4,7 +4,7 @@
       "model": "products.category",
       "fields": {
         "name": "ringing_equipment",
-        "description": "Ringing Equipment"
+        "friendly_name": "Ringing Equipment"
       }
     },
     {
