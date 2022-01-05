@@ -1,0 +1,47 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "1325476",
+        "name": "50-ringing-things",
+        "friendly_name": "50 Ringing Things",
+        "description": "People like goals and challenges - it motivates them, maintains their interest and gets them engaged so this latest ART initiative is aiming to meet that need. This scheme aims to show that ringing is both interesting and fun.",
+        "price": 9.99,
+        "category": 3,
+        "rating": 4.1,
+        "image_url": "https://github.com/Tom1358/tower_tools/blob/c53cd6d6e869fd9b3fb3c4099b6eb1454c3e8cfe/static/imgs/50-ringing-things1.jpg",
+        "image": "50-ringing-things1.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "321543654",
+        "name": "bell_ropes",
+        "friendly_name": "Bell ropes, available with selected sally colours",
+        "description": "Bell ropes, available with selected sally colours.  Contact us to discuss rope length and sally style.",
+        "price": 50,
+        "category": 1,
+        "rating": 4.1,
+        "image_url": "https://github.com/Tom1358/tower_tools/blob/816feaa16655cb45d02ddcbd0f93da8c06fb7ccb/static/imgs/bell_ropes.jpg",
+        "image": "bell_ropes.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "54354321",
+        "name": "bear_on_a_bell1",
+        "friendly_name": "A Bear on a Bell",
+        "description": "Allow people to get your attention in style!  They pull on the bear and the bell will ring, alerting you to their presence.  Let the dull doorbell end a death, and start entertaining your visitors by introducing them to your bell-ringing bear!",
+        "price": 30,
+        "category": 2,
+        "rating": 4.1,
+        "image_url": "https://github.com/Tom1358/tower_tools/blob/c53cd6d6e869fd9b3fb3c4099b6eb1454c3e8cfe/static/imgs/bear_on_a_bell1.jpg",
+        "image": "bear_on_a_bell1.jpg"
+      }
+    }
+]
