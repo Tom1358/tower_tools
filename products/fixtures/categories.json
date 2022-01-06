@@ -11,16 +11,16 @@
       "pk": 2,
       "model": "products.category",
       "fields": {
-        "name": "learning_tools",
-        "friendly_name": "Learning and Study Tools"
+        "name": "merchandise",
+        "friendly_name": "Merchandise"
       }
     },
     {
       "pk": 3,
       "model": "products.category",
       "fields": {
-        "name": "merchandise",
-        "friendly_name": "Merchandise"
+      "name": "learning_tools",
+      "friendly_name": "Learning and Study Tools"
       }
     }
 ]
