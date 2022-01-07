@@ -4,7 +4,7 @@ from .models import Product
 def ringing_equipment(request):
     """ a view to return ringing equipment products """
 
-    ringing_equipment = Product.objects.get(category=1)
+    ringing_equipment = Product.objects.filter(category=1)
 
     context = {
         'ringing_equipment': ringing_equipment,
