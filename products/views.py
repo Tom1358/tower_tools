@@ -16,10 +16,22 @@ def ringing_equipment(request):
 def merchandise(request):
     """ a view to return merchandise products """
 
-    merchandise = Product.objects.get(category=2)
+    merchandise = Product.objects.filter(category=2)
 
     context = {
         'merchandise': merchandise,
     }
 
     return render(request, 'products/merchandise.html', context)
+
+
+def learning_tools(request):
+    """ a view to return learning tools products """
+
+    learning_tools = Product.objects.filter(category=3)
+
+    context = {
+        'learning_tools': learning_tools,
+    }
+
+    return render(request, 'products/learning_tools.html', context)
