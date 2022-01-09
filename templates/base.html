@@ -100,8 +100,10 @@
             <div class="text-center">
               <div><i class="fas fa-shopping-bag fa-lg"></i></div>
               <p class="my-0">
-                {% if in_basket %}
-                {{ in_basket }}
+                {% if bag_items %}
+                  {{ product_count }}
+                {% else %}
+                  0
                 {% endif %}
               </p>
             </div>
