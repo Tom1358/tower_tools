@@ -43,5 +43,65 @@
         "image_url": "https://github.com/Tom1358/tower_tools/blob/c53cd6d6e869fd9b3fb3c4099b6eb1454c3e8cfe/static/imgs/bear_on_a_bell1.jpg",
         "image": "bear_on_a_bell1.jpg"
       }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "54647457457",
+        "name": "bell_handling_dvd1",
+        "friendly_name": "Bell Handling DVD",
+        "description": "Allow people to get your attention in style!  They pull on the bear and the bell will ring, alerting you to their presence.  Let the dull doorbell end a death, and start entertaining your visitors by introducing them to your bell-ringing bear!",
+        "price": 9.99,
+        "category": 3,
+        "rating": 4.1,
+        "image_url": "bell_handling_dvd1.jpg",
+        "image": "bell_handling_dvd1.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "865767574",
+        "name": "bellringing_notebook1",
+        "friendly_name": "A Bellringing Notebook",
+        "description": "Allow people to get your attention in style!  They pull on the bear and the bell will ring, alerting you to their presence.  Let the dull doorbell end a death, and start entertaining your visitors by introducing them to your bell-ringing bear!",
+        "price": 4.99,
+        "category": 2,
+        "rating": 4.1,
+        "image_url": "bellringing_notebook1.jpg",
+        "image": "bellringing_notebook1.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "346346346",
+        "name": "childrens_handbell_set1",
+        "friendly_name": "A Set of Handbells for Children",
+        "description": "Allow people to get your attention in style!  They pull on the bear and the bell will ring, alerting you to their presence.  Let the dull doorbell end a death, and start entertaining your visitors by introducing them to your bell-ringing bear!",
+        "price": 19.99,
+        "category": 3,
+        "rating": 4.1,
+        "image_url": "childrens_handbell_set1.jpg",
+        "image": "childrens_handbell_set1.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "4577e45754",
+        "name": "discover-bell-ringing1",
+        "friendly_name": "Discover Bell-Ringing",
+        "description": "Allow people to get your attention in style!  They pull on the bear and the bell will ring, alerting you to their presence.  Let the dull doorbell end a death, and start entertaining your visitors by introducing them to your bell-ringing bear!",
+        "price": 19.99,
+        "category": 3,
+        "rating": 4.1,
+        "image_url": "discover-bell-ringing1.jpg",
+        "image": "discover-bell-ringing1.jpg"
+      }
     }
 ]
