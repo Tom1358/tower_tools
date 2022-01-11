@@ -33,3 +33,10 @@ html {
     width: 50%;
     height: 100%;
 }
+
+
+/* --------------- Page Titles --------------- */
+.title-size {
+    text-align: center;
+    font-size: x-large;
+}

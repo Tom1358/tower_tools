@@ -49,14 +49,14 @@
       "model": "products.product",
       "fields": {
         "sku": "54647457457",
-        "name": "bell_handling_dvd1",
+        "name": "bell-handling-dvd1",
         "friendly_name": "Bell Handling DVD",
         "description": "Allow people to get your attention in style!  They pull on the bear and the bell will ring, alerting you to their presence.  Let the dull doorbell end a death, and start entertaining your visitors by introducing them to your bell-ringing bear!",
         "price": 9.99,
         "category": 3,
         "rating": 4.1,
-        "image_url": "bell_handling_dvd1.jpg",
-        "image": "bell_handling_dvd1.jpg"
+        "image_url": "bell-handling-dvd1.jpg",
+        "image": "bell-handling-dvd1.jpg"
       }
     },
     {
