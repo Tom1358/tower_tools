@@ -11,7 +11,7 @@ def add_to_bag(request, item_id):
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    size = None
+    length = None
     if 'rope_length' in request.POST:
         length = request.POST['rope_length']
     bag = request.session.get('bag', {})
