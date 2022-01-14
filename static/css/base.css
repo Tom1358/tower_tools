@@ -40,3 +40,9 @@ html {
     text-align: center;
     font-size: x-large;
 }
+
+.button-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
