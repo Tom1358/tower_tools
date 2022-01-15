@@ -32,43 +32,15 @@
                                 <img class="img-fluid rounded" src="/static/imgs/{{ item.product.image }}">
                             </td>
                             <td class="py-3">
-                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                <p class="my-0"><strong>Size: </strong>{% if item.product.rope_size_option %}{{ item.length }}{% else %}N/A{% endif %}</p>
+                                <p class="my-0"><strong>{{ item.product.friendly_name }}</strong></p>
                                 <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
+                                <a href="{% url 'remove_from_bag' item.product.id  %}" class="remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.length }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">${{ item.product.price }}</p>
                             </td>
-                            <td class="py-3 w-25">
-                                <form action="POST" action="{% url 'adjust_bag' item.item_id %}" class="form update-form">
-                                    {% csrf_token %}
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <div class="input-group-prepend">
-                                                <button class="decrement-qty btn border rounded" data-item_id="{{ item.item_id }}" id="_id_qty_{{ item.item_id }}">
-                                                    <span>
-                                                        <i class="fas fa-minus fa-sm"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            <input class="form-control qty_input" type="number" name="quantity" value="{{ item.quantity }}"  min="1" max="99"
-                                                data-item_id="{{ item.item_id }}" id="_id_qty_{{ item.item_id }}">
-                                            <div class="input-group-append">
-                                                <button class="increment-qty btn border rounded" data-item_id="{{ item.item_id }}" id="_id_qty_{{ item.item_id }}">
-                                                    <span>
-                                                        <i class="fas fa-plus fa-sm"></i>
-                                                    </span>
-                                                </button>
-                                            </div>
-                                            {% if item.product.rope_size_option %}
-                                                <input type="hidden" name="rope_length" value="{{ item.length }}">
-                                            {% endif %}
-                                        </div>
-                                    </div>
-                                </form>
-                                <a href="" class="update-link"><small>Update</small></a>
-                                <a href="" class="remove-item" style="float: right;" id="remove_{{ item.item_id }}" data-size="{{ item.length }}"><small>Remove</small></a>
-                            </td>
+                            <td class="py-3">
+                                <p class="my-0">{{ item.quantity }}</p>
                             <td class="py-3">
                                 <p class="my-0">${{ item.product.price }}</p>
                             </td>
@@ -132,9 +104,8 @@
     $('.remove-item').click(function(e) {
         let csrfToken = "{{ csrf_token }}";
         let itemId = $(this).attr('id').split('remove_')[1];
-        let length = $(this).data('length');
         let url = `/bag/remove/${itemId}`;
-        let data = {'csrfmiddlewaretoken': csrfToken, 'length': length};
+        let data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
          .done(function() {
