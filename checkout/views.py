@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 
-from .form import OrderForm
+from .forms import OrderForm
 
 
 def checkout(request):
