@@ -20,6 +20,7 @@
         <div class="col-12 col-lg-6">
             <p>Please fill out the form below to complete your order:</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Your Details</legend>
                     {{ order_form.full_name | as_crispy_field }}
