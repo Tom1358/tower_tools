@@ -47,5 +47,8 @@ html {
     cursor: pointer;
 }
 
-/* --------------- checkout --------------- */
+/* --------------- allauth --------------- */
 
+.content-centred {
+    text-align: center;
+}
