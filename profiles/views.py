@@ -15,8 +15,10 @@ def profile(request):
         if form.is_valid():
             form.save()
             #message here?
+    else:
+        form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
-    form = UserProfileForm(instance=profile)
+    
 
     template = 'profiles/profile.html'
     context = {

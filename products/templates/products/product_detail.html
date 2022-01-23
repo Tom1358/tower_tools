@@ -17,14 +17,14 @@
                 <div class="image-container my-5">
                     {% if product.image %}
                         <a href="{{ product.image.url }}" target="_blank">
-                            <img class="card-img-top img-fluid" src="/static/imgs/{{ product.image }}" alt="{{ product.friendly_name }}">
+                            <img class="card-img-top img-fluid" src="/static/imgs/{{ product.image }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
                         <a href="">
-                            <img class="card-img-top img-fluid" src="/static/imgs/{{ product.image }}" alt="{{ product.friendly_name }}">
+                            <img class="card-img-top img-fluid" src="/static/imgs/{{ product.image }}" alt="{{ product.name }}">
                         </a>
                     {% endif %}
-                    <p class="mb-0 text-center">{{ product.friendly_name }}</p>
+                    <p class="mb-0 text-center">{% if product.friendly_name %}{{ product.friendly_name }}{% else %}{{ product.name }}{% endif %}</p>
                     <p class="mb-0 text-center">Average Customer Rating:</p>
                     {% if product.rating %}
                         <div class="text-muted text-center"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</div>

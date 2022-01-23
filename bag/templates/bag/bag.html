@@ -30,7 +30,11 @@
                     {% for item in bag_items %}
                         <tr>
                             <td class="p-3 w-25">
-                                <img class="img-fluid rounded" src="/static/imgs/{{ item.product.image }}">
+                                {% if item.product.image %}
+                                    <img class="img-fluid rounded" src="/static/imgs/{{ item.product.image }}">
+                                {% else %}
+                                    <img class="img-fluid rounded" src="/static/imgs/no_image.jpg">
+                                {% endif %}
                             </td>
                             <td class="py-3">
                                 <p class="my-0"><strong>{{ item.product.friendly_name }}</strong></p>
@@ -38,12 +42,12 @@
                                 <a href="{% url 'remove_from_bag' item.product.id  %}" class="remove-item" id="remove_{{ item.item_id }}" data-size="{{ item.length }}"><small>Remove</small></a>
                             </td>
                             <td class="py-3">
-                                <p class="my-0">${{ item.product.price }}</p>
+                                <p class="my-0">£{{ item.product.price }}</p>
                             </td>
                             <td class="py-3">
                                 <p class="my-0">{{ item.quantity }}</p>
                             <td class="py-3">
-                                <p class="my-0">${{ item.product.price | calc_subtotal:item.quantity }}</p>
+                                <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                             </td>
                         </tr>
                     {% endfor %}

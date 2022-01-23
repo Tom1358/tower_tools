@@ -7,7 +7,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         fields = '__all__'
-        exclude = ('rope_size_option',)
+        exclude = ('rope_size_option', 'friendly_name',)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
