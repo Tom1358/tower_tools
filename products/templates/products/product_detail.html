@@ -35,7 +35,7 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.friendly_name }}</p>
+                    <p class="mb-0">{% if product.friendly_name %}{{ product.friendly_name }}{% else %}{{ product.name }}{% endif %}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
                     
                     <p class="mt-3">{{ product.description }}</p>
@@ -65,7 +65,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <input type="submit" class="btn btn-black rounded-0 border border_rounded text-black mt-5" value="Add to Basket">
+                                <div>
+                                    <input type="submit" class="btn btn-black rounded-0 border border_rounded text-black mt-5" value="Add to Basket">
+                                    {% if request.user.is_superuser %}
+                                        <small class="ml-3">
+                                            <a href="{% url 'edit_product' product.id %}">Edit Product</a>
+                                            <a href="{% url 'delete_product' product.id %}">Delete Product</a>
+                                        </small>
+                                    {% endif %}
+                                </div>
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </div>
