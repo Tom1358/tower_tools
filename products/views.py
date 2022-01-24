@@ -57,12 +57,14 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the site """
     if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you are not authorised to add anything.')
         return redirect(reverse('home'))
 
     if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
+            messages.success(request, 'Success!  Well done, product added.')
             return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = ProductForm()
@@ -78,6 +80,7 @@ def add_product(request):
 def edit_product(request, product_id):
     """ Edit a product on the site """
     if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you are not authorised to edit this.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
@@ -86,6 +89,7 @@ def edit_product(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
+            messages.success(request, 'Success!  Well done, product edited.')
             return redirect(reverse('product_detail', args=[product.id]))
     else:
         form = ProductForm(instance=product)
@@ -102,8 +106,10 @@ def edit_product(request, product_id):
 def delete_product(request, product_id):
     """ Delete a product from site """
     if not request.user.is_superuser:
+        messages.error(request, 'Sorry, you are not authorised to delete this.')
         return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
+    messages.success(request, 'Gone forever!  Hopefully that was intentional.')
     return redirect(reverse('home'))

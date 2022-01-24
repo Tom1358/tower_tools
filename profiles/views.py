@@ -12,16 +12,17 @@ from checkout.models import Order
 def profile(request):
     """ display profile """
     profile = get_object_or_404(UserProfile, user=request.user)
+    orders = profile.orders.all()
 
     if request.method == "POST":
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            #message here?
+            messages.success(request,'Congratulations!  Profile successfully updated.')
+        else:
+            messages.error(request,'Form not valid. Please try again.')
     else:
         form = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
-    
 
     template = 'profiles/profile.html'
     context = {
@@ -34,6 +35,10 @@ def profile(request):
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'This is a past confirmation for order number {order_number}.'
+    )
 
     template = 'checkout/checkout_success.html'
     context = {
