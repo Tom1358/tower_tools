@@ -130,3 +130,16 @@ html {
         height: calc(100vh - 116px);
     }
 }
+
+/* toasts */
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.toast {
+    width: auto;
+    margin-top: 15px;
+}
