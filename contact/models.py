@@ -11,3 +11,6 @@ class Feedback(models.Model):
     date = models.DateField(auto_now_add=True)
     summary = models.CharField(max_length=250, null=False, blank=False)
     your_message = models.TextField(null=False, blank=False)
+
+    def __str__(self):
+        return self.full_name

@@ -95,12 +95,12 @@
         </li>
 
         <!-- shopping basket icon in nav -->
-        <li class="list-inline-item">
+        <li class="list-inline-item float-left">
           <a class="{% if in_basket %}text-info font-weight-bold text-black{% else %}text-black{% endif %} nav-link"
             href="{% url 'view_bag' %}">
             <div class="text-center">
               <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-              <p class="my-0">
+              <p class="icons_float_left">
                 {% if bag_items %}
                   {{ product_count }}
                 {% else %}

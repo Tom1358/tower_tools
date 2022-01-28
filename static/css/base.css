@@ -17,7 +17,7 @@ html {
   }
 
 .icons_float_left {
-    left: auto;
+    float: left;
 }
 
 /* --------------- Hero image --------------- */
