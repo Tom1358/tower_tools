@@ -33,3 +33,10 @@ class Product(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
+
+class Review(models.Model):
+    product_name = models.ForeignKey('Product', null=True, blank=True, on_delete=models.SET_NULL)
+    stars = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+
+    def __str__(self):
+        return self.name
