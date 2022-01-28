@@ -143,3 +143,9 @@ html {
     width: auto;
     margin-top: 15px;
 }
+
+
+.landing-text {
+    width: 50%;
+    margin: 3rem auto 3rem auto;
+}
