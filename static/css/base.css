@@ -149,3 +149,8 @@ html {
     width: 50%;
     margin: 3rem auto 3rem auto;
 }
+
+.mid-width {
+    margin: auto;
+    width: 75%;
+}

@@ -1,0 +1,57 @@
+[{
+        "pk": 1,
+        "model": "products.review",
+        "fields": {
+            "product_name": 1,
+            "stars": 4.1
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.review",
+        "fields": {
+            "product_name": 2,
+            "stars": 4.1
+        }
+    },
+    {
+        "pk": 3,
+        "model": "products.review",
+        "fields": {
+            "product_name": 3,
+            "stars": 4.1
+        }
+    },
+    {
+        "pk": 4,
+        "model": "products.review",
+        "fields": {
+            "product_name": 4,
+            "stars": 4.1
+        }
+    },
+    {
+        "pk": 5,
+        "model": "products.review",
+        "fields": {
+            "product_name": 5,
+            "stars": 4.1
+        }
+    },
+    {
+        "pk": 6,
+        "model": "products.review",
+        "fields": {
+            "product_name": 6,
+            "stars": 4.1
+        }
+    },
+    {
+        "pk": 7,
+        "model": "products.review",
+        "fields": {
+            "product_name": 7,
+            "stars": 4.1
+        }
+    }
+]
